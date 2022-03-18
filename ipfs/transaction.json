@@ -1,0 +1,6 @@
+{
+     "transaction_id": "id",
+     "source_sytem": "system name",
+     "amount": "amount billed",
+     "currency": "currency"
+}
