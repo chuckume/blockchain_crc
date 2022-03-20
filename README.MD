@@ -1,3 +1,4 @@
+
 # Project setup
 
 Install remix in project terminal (get node at nodejs.org):
@@ -20,4 +21,9 @@ https://docs.google.com/presentation/d/1Vlu4eKyztd7EDq0PdN5ekq4mLXy3iRHMEaiKlnIR
 app.pinata.cloud
 
 https://ipfs.io/ipfs/QmbKAgUgopYKA4dHbwd5uKBSoBUPZE9AS3pxUy8V2xtS4j
+
+# To check all smart contracts deployed from your address
+
+https://ropsten.etherscan.io/address/YOUR_ADDRESS
+
 
