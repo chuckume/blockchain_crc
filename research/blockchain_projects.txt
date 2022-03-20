@@ -1,0 +1,16 @@
+
+
+Consensus mechanisms:
+Proof of stake: Cardano, Tendermint, Tezos, Dfinity, Nzt, BlackCoin, NuShare, Oora
+Delegated proof of stake
+Proof of stake variations: Leased proof of stake, Transactions as Proof-of-Stake, Proof of importance, Proof of Capacity,
+Proof of Weight, Proof of Authority, Proof of Elapsed Time
+Directed Acrylic Graph (DAG): Iot Chain, Nano, IOTA
+Byzantine Fault Tolerance: Ripple, Stellar
+
+Oracles: the smart contract must call external service. Consequently it costs fees to consume external data.
+
+Social media: Steemit -> akasha, all.me, dlive
+Renewable energies: solar coin, electric chain, sun exchange
+Plastic Bank, Earth Dollar, bit seeds, earth token
+Attention economy: Brave - Basic Attention Token (BAT), Basic Attention Metric
