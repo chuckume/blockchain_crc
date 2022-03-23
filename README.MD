@@ -60,3 +60,13 @@ BODY : Raw
 	"params":[],
 	"id":1
 }
+
+
+Import Pkey to geth
+geth account import --datadir D:\geth\data_dir ./key.prv
+
+Connect metamask to geth
+0xb504D3CAA96e90Bb5FDC06591f45Ef108C16e4f0
+geth --datadir D:\geth\data_dir  --networkid 2018 --http --http.corsdomain “*” --http.api “admin,db,eth,miner,web3,net,personal,txpool” --allow-insecure-unlock --ropsten --syncmode "full"  dumpconfig > roptsten.toml
+
+installé web3
