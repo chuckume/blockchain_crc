@@ -70,3 +70,17 @@ Connect metamask to geth
 geth --datadir D:\geth\data_dir  --networkid 2018 --http --http.corsdomain “*” --http.api “admin,db,eth,miner,web3,net,personal,txpool” --allow-insecure-unlock --ropsten --syncmode "full"  dumpconfig > roptsten.toml
 
 installé web3
+
+
+# Ethereum Tutorial 
+https://github.com/ethereumbook/ethereumbook/blob/develop/02intro.asciidoc#remix_compile
+
+Shows how to create a faucet on ropsten
+
+# Testnet options
+- geth or parity
+- Local blockchain : Ganache
+- Cloud based client : Infuria
+- Remote client (doesn't store blockchain dataa) : MetaMask, Emerald Wallet, MyEtherWallet, or MyCrypto
+
+Light client : validate blocks, remote client dont
