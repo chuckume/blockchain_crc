@@ -37,7 +37,7 @@ Download instruction on https://geth.ethereum.org/
 geth --ropsten --syncmode "full"  dumpconfig > roptsten.toml
 
 ### Start geth with given config file. Here too the testnet must be specified.
-geth --ropsten --config ropsten.toml --http
+geth --ropsten --config d:\geth\ropsten.toml --http
 
 
 To test curl : curl --data "{/"jsonrpc/":/"2.0/",/"method/":/"eth_coinbase/", /"id/":1}" localhost:8545
@@ -84,3 +84,31 @@ Shows how to create a faucet on ropsten
 - Remote client (doesn't store blockchain dataa) : MetaMask, Emerald Wallet, MyEtherWallet, or MyCrypto
 
 Light client : validate blocks, remote client dont
+
+
+
+Json-Rpc example:
+curl -X POST -H "Content-Type: application/json" --data \
+'{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":1}' \
+  http://localhost:8545
+
+https://www.jsonrpc.org/specification
+
+curl -X POST -H "Content-Type: application/json" --data \
+  '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":4213}' \
+  http://localhost:8545
+echo $((0x430e23400))
+
+Chapter 4 cryptography
+
+n simple terms, a hash function is “any function that can be used to map data of arbitrary size to data of fixed size.”
+
+While you may see "SHA-3" mentioned throughout Ethereum documents and code, many if not all of those instances actually refer to Keccak-256, not the finalized FIPS-202 SHA-3 standard. The implementation differences are slight, having to do with padding parameters, but they are significant in that Keccak-256 produces different hash outputs from FIPS-202 SHA-3 for the same input.
+
+Test vector: passing an empty vector and see th return
+Keccak256("") = c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470
+SHA3("") = a7ffc6f8bf1ed76651c14756a061d662f580ff4de43b49fa82d80a4b80f8434a
+
+
+# Hello World source
+https://mirabdulhaseeb.medium.com/truffle-vs-hardhat-vs-brownie-lets-compare-ea08b927d084
