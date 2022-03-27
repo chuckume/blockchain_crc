@@ -112,3 +112,37 @@ SHA3("") = a7ffc6f8bf1ed76651c14756a061d662f580ff4de43b49fa82d80a4b80f8434a
 
 # Hello World source
 https://mirabdulhaseeb.medium.com/truffle-vs-hardhat-vs-brownie-lets-compare-ea08b927d084
+
+
+
+# DEFI
+
+Uniswap
+DAI (MakerDao)
+Compound
+Dharma
+
+Defi protocols mostly provide liquidity for margin trading
+They are also used for flash loans that are valid within one transaction.
+There are zero risk because the borrower must be able to pay back the tokens otherwise the contract won't execute the trade. The borrower doesnt need collaterals.
+
+Flash loans fail if: 1) Insufficient transaction fees, 2) conflicting transctions 3) anothe condition within the transaction cannot be met
+
+Loans are backed by collaterals so they are guaranteed.
+
+Flash attacks: capital intensive attacks on DEXes. Attacks vulnerabilites on untested contracts, low liquidity markets.
+Can be used to manipulate data feeds about asset prices on illiquid markets.
+
+Prices come from different exchanges with high spread, so one can profit by borrowing tokens at low price and selling at higher price before repaying the loan. This can be made within the same transactio since most defi run on Ethereum. Attackers can borrow almost unlimited amount of money to manipulate the market price .
+
+
+Some DEX use liquidity pools.
+
+Weaknesses:
+- Oracles : data feeds can be manipulated.
+- Vulnerable to flash attacks
+- Not fully decentralized
+- Not tested.
+- Low user experience
+- Low liquidity
+- many Defi producct overcollateralieed
