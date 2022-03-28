@@ -146,3 +146,20 @@ Weaknesses:
 - Low user experience
 - Low liquidity
 - many Defi producct overcollateralieed
+
+
+Brownie learning:
+https://betterprogramming.pub/part-1-brownie-smart-contracts-framework-for-ethereum-basics-5efc80205413
+brownie console
+
+from brownie import accounts
+
+print(accounts)
+
+print(accounts[0])
+
+dir(accounts[0])
+
+accounts[1].balance()
+
+accounts[0].deploy(SimpleContract)
