@@ -3,64 +3,36 @@ from brownie import *
 print(len(accounts))
 
 
-p = project.load(r'D:\code\blockchain_crc\project1', name="IntegerTest")
+p = project.load(r'D:\code\blockchain_crc\project1', name="BooleanTest")
 p.load_config()
 
 
-p1 = project.load(r'D:\code\blockchain_crc\project1', name="SignedIntegerTest")
-p1.load_config()
 
-from brownie.project.IntegerTest import *
-from brownie.project.SignedIntegerTest import *
+from brownie.project.BooleanTest import *
 
 network.connect('development')
 
 print(len(accounts))
 
-integer = accounts[0].deploy(IntegerTest)
-integer.setVal(1)
-assert integer.getVal() == 1
-print("PRINTING", integer.getVal())
+contract = accounts[0].deploy(BooleanTest)
+contract.setVal(True)
+assert contract.getVal() == True
 
-integer.setVal("22")
-assert integer.getVal() == 22
-print("PRINTING", integer.getVal())
+
+contract.setVal(False)
+assert contract.getVal() == False
+print("PRINTING", contract.getVal())
+
+try:
+    contract.setVal('STRING DATA')
+except ValueError as e:
+    print(e.args[0])
 
 
 try:
-    integer.setVal("AA")
-    print("PRINTING", integer.getVal())
-except TypeError:
-    print('RAISED TYPE ERROR')
-
-try:
-    integer.setVal(-1)
-    print("PRINTING", integer.getVal())
-except OverflowError:
-    print('OVERFLOW ERROR')
-
-
-
-integer = accounts[0].deploy(SignedIntegerTest)
-integer.setVal(1)
-assert integer.getVal() == 1
-print("PRINTING", integer.getVal())
-
-integer.setVal("22")
-assert integer.getVal() == 22
-print("PRINTING", integer.getVal())
-
-
-try:
-    integer.setVal("AA")
-    print("PRINTING", integer.getVal())
-except TypeError:
-    print('RAISED TYPE ERROR')
-
-
-integer.setVal(-1)
-assert integer.getVal() == -1
-
+    contract.setVal(222)
+except ValueError as e:
+    print(e.args[0])
 
 import time
 time.sleep(1) 
