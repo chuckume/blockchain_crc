@@ -163,3 +163,28 @@ dir(accounts[0])
 accounts[1].balance()
 
 accounts[0].deploy(SimpleContract)
+
+
+TRADEOFFS BETWEEN TRANSFER, SEND, CALL FOR TRANSFERING ETHER
+
+https://ethereum.stackexchange.com/questions/19341/address-send-vs-address-transfer-best-practice-usage
+
+https://solidity-by-example.org/sending-ether/
+
+91
+
+address.transfer()
+
+throws on failure
+forwards 2,300 gas stipend (not adjustable), safe against reentrancy
+should be used in most cases as it's the safest way to send ether
+address.send()
+
+returns false on failure
+forwards 2,300 gas stipend (not adjustable), safe against reentrancy
+should be used in rare cases when you want to handle failure in the contract
+address.call.value().gas()()
+
+returns false on failure
+forwards all available gas (adjustable), not safe against reentrancy
+should be used when you need to control how much gas to forward when sending ether or to call a function of another contract
